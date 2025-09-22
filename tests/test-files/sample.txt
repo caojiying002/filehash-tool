@@ -1,0 +1,7 @@
+This is a sample text file for testing filehash.
+It contains multiple lines to test hash calculation.
+
+Line 3 is empty above.
+Special characters: !@#$%^&*()_+-=[]{}|;':",./<>?
+
+End of sample file.

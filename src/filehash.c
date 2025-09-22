@@ -65,12 +65,22 @@ const char* get_hash_name(hash_type_t type) {
 }
 
 int is_valid_file(const char *filename) {
-    FILE *file = fopen(filename, "rb");
-    if (file) {
-        fclose(file);
-        return 1;
+    struct stat path_stat;
+    if (stat(filename, &path_stat) != 0) {
+        return 0;
     }
-    return 0;
+
+    if (S_ISDIR(path_stat.st_mode)) {
+        fprintf(stderr, "Error: '%s' is a directory, not a file\n", filename);
+        return 0;
+    }
+
+    if (!S_ISREG(path_stat.st_mode)) {
+        fprintf(stderr, "Error: '%s' is not a regular file\n", filename);
+        return 0;
+    }
+
+    return 1;
 }
 
 void print_usage(const char *program_name) {

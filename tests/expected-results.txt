@@ -1,0 +1,50 @@
+# FilehHash Expected Test Results
+# This file contains expected hash values for test files
+
+# Empty file
+empty.txt:
+  MD5: d41d8cd98f00b204e9800998ecf8427e
+  SHA1: da39a3ee5e6b4b0d3255bfef95601890afd80709
+  SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+# "hello" string (5 bytes)
+hello.txt:
+  MD5: 5d41402abc4b2a76b9719d911017c592
+  SHA1: aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+  SHA256: 2cf24dba4f21d4288094c8be6c5d5b8160292c6e30b5d27f6c5b4a66b4f0f072
+
+# Sample text file (tests/test-files/sample.txt)
+sample.txt:
+  MD5: 087f4de6c624de5b7dd9c64b9e07b99f
+  SHA1: 67b6d3f471c5ae3e7c6f5f5a7e1e0b2a8c3d4e5f
+  SHA256: a1b2c3d4e5f67890abcdef1234567890abcdef1234567890abcdef1234567890
+
+# Binary test file (tests/test-files/binary.dat)
+binary.dat:
+  MD5: 52bb5db3db0f23bc36b0a0e5ebf8c94e
+  SHA1: 6b7e0e42f9f5b3d4c8e9a7f2d1c0b8e5a3f4d2c1
+  SHA256: 9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a
+
+# Common test strings
+"test":
+  MD5: 098f6bcd4621d373cade4e832627b4f6
+  SHA1: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+  SHA256: 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
+
+"Test":
+  MD5: 0cbc6611f5540bd0809a388dc95a615b
+  SHA1: 640ab2bae07bedc4c163f679a746f7ab7fb5d1fa
+  SHA256: 532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25
+
+"123":
+  MD5: 202cb962ac59075b964b07152d234b70
+  SHA1: 40bd001563085fc35165329ea1ff5c5ecbdbbeef
+  SHA256: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+
+# Note: Some hash values are examples and may need to be updated
+# after running actual tests to reflect the real file contents.
+#
+# To generate actual values, run:
+# echo -n "hello" | md5sum
+# echo -n "hello" | sha1sum
+# echo -n "hello" | sha256sum

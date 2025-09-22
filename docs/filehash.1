@@ -1,0 +1,133 @@
+.TH FILEHASH 1 "September 2025" "filehash 1.0.0" "User Commands"
+.SH NAME
+filehash \- calculate hash values for files
+.SH SYNOPSIS
+.B filehash
+[\fIOPTIONS\fR] \fIFILE\fR...
+.SH DESCRIPTION
+.B filehash
+is a command-line tool for calculating hash values of files using various algorithms.
+It supports MD5, SHA1, and SHA256 hash algorithms and can process single or multiple files.
+.PP
+The program is designed to be simple, efficient, and reliable for verifying file integrity
+and generating checksums for files.
+.SH OPTIONS
+.TP
+.BR \-m ", " \-\-md5
+Calculate MD5 hash (default algorithm)
+.TP
+.BR \-s ", " \-\-sha1
+Calculate SHA1 hash
+.TP
+.BR \-S ", " \-\-sha256
+Calculate SHA256 hash
+.TP
+.BR \-a ", " \-\-all
+Calculate all supported hash types (MD5, SHA1, SHA256)
+.TP
+.BR \-h ", " \-\-help
+Display help message and exit
+.TP
+.BR \-v ", " \-\-version
+Display version information and exit
+.SH EXAMPLES
+Calculate MD5 hash for a single file:
+.RS
+.B filehash file.txt
+.RE
+.PP
+Calculate SHA1 hash:
+.RS
+.B filehash \-s file.txt
+.RE
+.PP
+Calculate SHA256 hash:
+.RS
+.B filehash \-S file.txt
+.RE
+.PP
+Calculate all hash types:
+.RS
+.B filehash \-a file.txt
+.RE
+.PP
+Process multiple files:
+.RS
+.B filehash file1.txt file2.txt file3.txt
+.RE
+.PP
+Use wildcards to process multiple files:
+.RS
+.B filehash *.txt
+.RE
+.SH OUTPUT FORMAT
+The output format follows the pattern:
+.PP
+.RS
+ALGORITHM (hash_value) = filename
+.RE
+.PP
+For example:
+.RS
+MD5 (d41d8cd98f00b204e9800998ecf8427e) = empty.txt
+.br
+SHA1 (da39a3ee5e6b4b0d3255bfef95601890afd80709) = empty.txt
+.br
+SHA256 (e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855) = empty.txt
+.RE
+.SH EXIT STATUS
+The program returns the following exit codes:
+.TP
+.B 0
+Success - all files processed successfully
+.TP
+.B 1
+Error - invalid arguments, file access errors, or other failures
+.SH FILES
+.TP
+.I /usr/bin/filehash
+The executable program
+.TP
+.I /usr/share/man/man1/filehash.1
+This manual page
+.SH ALGORITHMS
+.TP
+.B MD5
+Message Digest Algorithm 5, produces 128-bit hash values. While widely used,
+MD5 is considered cryptographically broken and should not be used for security purposes.
+.TP
+.B SHA1
+Secure Hash Algorithm 1, produces 160-bit hash values. SHA1 is deprecated
+for cryptographic use but still commonly used for file integrity checking.
+.TP
+.B SHA256
+Secure Hash Algorithm 256, produces 256-bit hash values. Part of the SHA-2
+family and currently considered secure for most applications.
+.SH SECURITY CONSIDERATIONS
+While this tool can calculate cryptographic hashes, users should be aware of
+the security implications of different algorithms:
+.IP \(bu 2
+MD5 and SHA1 are vulnerable to collision attacks and should not be used
+for security-critical applications.
+.IP \(bu 2
+SHA256 is currently considered secure and is recommended for new applications.
+.IP \(bu 2
+For digital signatures or other security applications, consider using
+dedicated cryptographic tools.
+.SH BUGS
+Report bugs to: https://github.com/caojiying002/filehash-tool/issues
+.SH AUTHOR
+Written by Cao Jiying.
+.SH COPYRIGHT
+Copyright \(co 2024 Cao Jiying.
+.br
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it.
+.br
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+.BR md5sum (1),
+.BR sha1sum (1),
+.BR sha256sum (1),
+.BR openssl (1)
