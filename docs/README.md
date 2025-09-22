@@ -95,7 +95,7 @@ SHA256 (e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855) = empt
 
 ## 示例
 
-更多详细的使用示例请查看 [examples/usage.txt](examples/usage.txt)
+更多详细的使用示例请查看 [examples/USAGE.md](examples/USAGE.md)
 
 ## 开发构建
 
