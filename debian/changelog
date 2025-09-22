@@ -1,0 +1,9 @@
+filehash (1.0.0-1) unstable; urgency=medium
+
+  * Initial release
+  * Support for MD5, SHA1, and SHA256 hash calculations
+  * Command-line interface with multiple options
+  * Batch file processing capability
+  * Manual page included
+
+ -- Cao Jiying <caojiying002@126.com>  Sun, 22 Sep 2024 12:00:00 +0800

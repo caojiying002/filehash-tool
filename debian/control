@@ -1,0 +1,21 @@
+Source: filehash
+Section: utils
+Priority: optional
+Maintainer: Cao Jiying <caojiying002@126.com>
+Build-Depends: debhelper (>= 10), gcc, libssl-dev, pkg-config
+Standards-Version: 4.1.2
+Homepage: https://github.com/caojiying002/filehash-tool
+
+Package: filehash
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libssl3
+Description: Command-line file hash calculator
+ A simple and efficient command-line tool for calculating file hash values.
+ Supports MD5, SHA1, and SHA256 hash algorithms.
+ .
+ Features:
+  - Calculate hash for single or multiple files
+  - Support for MD5, SHA1, and SHA256 algorithms
+  - Batch processing capability
+  - Clean and readable output format
+  - Lightweight and fast operation

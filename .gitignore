@@ -1,0 +1,40 @@
+# Build artifacts
+build/
+*.o
+*.so
+*.a
+
+# Debian packaging artifacts
+debian/filehash/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/tmp/
+
+# Generated packages and build files
+../*.deb
+../*.ddeb
+../*.changes
+../*.buildinfo
+../*.dsc
+../*.tar.gz
+../*.tar.xz
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Claude Code files
+.claude/
